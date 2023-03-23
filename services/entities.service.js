@@ -30,10 +30,15 @@ class EntitiesService {
       throw boom.notFound('Not Found - Alguna de las entidades en el rango especificado no existe');
     }
 
-    const entitiesSortedByName = [...entities].sort((a, b) => a.data.name.localeCompare(b.data.name));
-
-    return entitiesSortedByName;
+    return this.sortArray(entities, 'name');
   }
+
+  // Función para ordenar de acuerdo a una propiedad en especifico
+  sortArray(arr, prop){
+    const entitiesSortedByProp = [...arr].sort((a, b) => a.data[prop].localeCompare(b.data[prop]));
+    return entitiesSortedByProp;
+  }
+
 }
 
 module.exports = EntitiesService;
