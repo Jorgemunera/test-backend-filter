@@ -37,11 +37,10 @@ La aplicación correrá por defecto en el puerto "3000" y el entorno "dev"
   POST /dev/entity/v2.1/entities/filter
 ```
 
-| Parameter | Type      | Description                        |
-| :-------- | :-------- | :--------------------------------- |
-| `startId` | `integer` | **Required**. Id inicial del rango |
-| :-------- | :-------- | :--------------------------------- |
-| `endId`   | `integer` | **Required**. Id final del rango   |
+| Parameter | Type      | Description          |
+| :-------- | :-------- | :------------------- |
+| `startId` | `integer` | Id inicial del rango |
+| `endId`   | `integer` | Id final del rango   |
 
 Tener en cuenta que se van a realizar todas las validaciones de datos para realizar la petición correctamente, y en caso de no cumplir con las validaciones se mostrará el error correspondiente de acuerdo a las indicaciones dadas para la creación de la API.
 
